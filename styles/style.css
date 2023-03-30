@@ -26,10 +26,10 @@ p {
 
 .pageHeader {
   /* height: 702px; */
-  background-image: url(https://www.w3schools.com/w3images/beach3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* background-image: url(https://www.w3schools.com/w3images/beach3.jpg); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
   position: relative;
 }
 
@@ -79,13 +79,14 @@ main > div:last-child > div > div {
   border-top: 6px solid var(--second-yellow-color);
 }
 
-main img {
+img {
   width: 100%;
 }
 
 @media screen and (max-width: 600px) {
   main > div {
     flex-direction: column;
+    margin: 0;
   }
 
   main > div > div {
