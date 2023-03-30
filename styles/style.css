@@ -71,21 +71,51 @@ main > div > div {
   padding: 0 16px;
 }
 
-main > div:first-child > div > div {
+main > div:first-child > div > div::before {
   border-top: 6px solid var(--first-yellow-color);
+  bottom: 100%;
+  left: 0;
+  right: 0;
 }
 
-main > div:last-child > div > div {
+main > div:last-child > div > div::before {
   border-top: 6px solid var(--second-yellow-color);
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.pageHeader::after, .imgContainer::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.pageHeader::after {
+  padding-top: calc(820 / 1654 * 100%);
+}
+
+.imgContainer::after {
+  padding-top: calc(2 / 3 * 100%);
 }
 
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 @media screen and (max-width: 600px) {
   .pageHeader > div {
-    font-size: 0;
+    opacity: 0;
   }
 
   main > div {
@@ -93,9 +123,6 @@ img {
     margin: 0;
   }
 
-  header > div {
-    opacity: 0;
-  }
 }
 
 
