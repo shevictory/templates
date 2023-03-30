@@ -55,7 +55,7 @@ h1 {
   font-weight: bold;
 }
 
-main > div {
+main {
   display: flex;
   flex-direction: column;
 }
@@ -71,12 +71,16 @@ main > div > div {
   padding: 0 16px;
 }
 
-main > div:first-child > div {
+main > div:first-child > div > div {
   border-top: 6px solid var(--first-yellow-color);
 }
 
-main > div:last-child > div {
+main > div:last-child > div > div {
   border-top: 6px solid var(--second-yellow-color);
+}
+
+main img {
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
