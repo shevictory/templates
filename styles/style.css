@@ -94,7 +94,7 @@ img {
   }
 
   main > div > div {
-    width: 100%;
+    opacity: 0;
   }
 }
 
