@@ -1,29 +1,31 @@
-:root{
+:root {
   --first-yellow-color: #ffc107;
   --second-yellow-color: #ff9800;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-size: 15px;
   font-family: Verdana,sans-serif;
   line-height: 1.5;
 }
 
-h2{
+h2 {
   font-size: 2rem;
   font-family: "Segoe UI",Arial,sans-serif;
+  margin: 10px 0;
 }
 
-p{
+p {
   font-size: 1rem;
+  margin: 15px 0;
 }
 
 .pageHeader {
-  height: 702px;
+  /* height: 702px; */
   background-image: url(https://www.w3schools.com/w3images/beach3.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -31,25 +33,55 @@ p{
   position: relative;
 }
 
-h1{
+h1 {
   font-size: 0;
 }
 
-.pageHeader > h2{
+.pageHeader > div {
+  padding: 0 16px;
+  width: 70%;
   position: absolute;
   left: 0;
   bottom: 10%;
-  font-weight: bold;
-  width: 70%;
   background-color: var(--first-yellow-color);
   opacity: 0.7;
 }
 
-.pageHeader > h2:hover{
+.pageHeader > div:hover {
   background-color: var(--second-yellow-color);
 }
 
+.pageHeader h2 {
+  font-weight: bold;
+}
 
+main > div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  margin: 50px 0;
+}
+
+main > div > div {
+  display: flex;
+  width: 50%;
+  padding: 0 16px;
+}
+
+main > div:first-child > div {
+  border-top: var(--first-yellow-color);
+}
+
+main > div:last-child > div {
+  border-top: var(--second-yellow-color);
+}
+
+@media screen and (max-width: 600px) {
+  main > div > div {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 
 
   
