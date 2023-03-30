@@ -9,13 +9,17 @@
 
 body {
   font-size: 15px;
-  font-family: Verdana,sans-serif;
+  font-family: Verdana, sans-serif;
   line-height: 1.5;
+}
+
+h1 {
+  font-size: 0;
 }
 
 h2 {
   font-size: 2rem;
-  font-family: "Segoe UI",Arial,sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 10px 0;
 }
 
@@ -25,19 +29,10 @@ p {
 }
 
 .pageHeader {
-  /* height: 702px; */
-  /* background-image: url(https://www.w3schools.com/w3images/beach3.jpg); */
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
-  /* background-size: cover; */
   position: relative;
 }
 
-h1 {
-  font-size: 0;
-}
-
-.pageHeader > div {
+.headerTitleContainer {
   padding: 0 16px;
   width: 70%;
   position: absolute;
@@ -47,51 +42,49 @@ h1 {
   opacity: 0.7;
 }
 
-.pageHeader > div:hover {
+.headerTitleContainer:hover {
   background-color: var(--second-yellow-color);
 }
 
-.pageHeader h2 {
+.headerTitleContainer h2 {
   font-weight: bold;
 }
 
 main {
   display: flex;
   flex-direction: column;
-}
-
-main > div {
-  display: flex;
-  padding: 0 16px;
   margin: 50px 0;
 }
 
-main > div > div {
+.twoOfferCardsContainer {
+  display: flex;
+  padding: 0 16px;
+}
+
+.twoOfferCardsContainer + .twoOfferCardsContainer {
+  margin-top: 50px;
+}
+
+.offerCard {
   width: 50%;
   padding: 0 16px;
 }
 
-main > div:first-child > div > div::before {
+.twoOfferCardsContainer:first-child .imgContainer {
   border-top: 6px solid var(--first-yellow-color);
-  bottom: 100%;
-  left: 0;
-  right: 0;
 }
 
-main > div:last-child > div > div::before {
+.twoOfferCardsContainer:last-child .imgContainer {
   border-top: 6px solid var(--second-yellow-color);
-  width: 100%;
-  left: 0;
-  right: 0;
 }
 
 .imgContainer {
   position: relative;
 }
 
-.pageHeader::after, .imgContainer::after {
-  content: "";
-  position: absolute;
+.pageHeader::after,
+.imgContainer::after {
+  content: '';
   display: block;
 }
 
@@ -114,17 +107,20 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .pageHeader > div {
+  .headerTitleContainer {
     opacity: 0;
   }
 
-  main > div {
+  .twoOfferCardsContainer {
     flex-direction: column;
     margin: 0;
   }
 
+  .offerCard {
+    width: 100%;
+  }
+
+  .offerCard + .offerCard {
+    margin-top: 50px;
+  }
 }
-
-
-  
-
