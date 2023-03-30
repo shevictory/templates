@@ -84,6 +84,10 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+  .pageHeader > div {
+    font-size: 0;
+  }
+
   main > div {
     flex-direction: column;
     margin: 0;
