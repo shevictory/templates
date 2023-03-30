@@ -93,7 +93,7 @@ img {
     margin: 0;
   }
 
-  main > div > div {
+  header > div {
     opacity: 0;
   }
 }
