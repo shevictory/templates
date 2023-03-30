@@ -58,27 +58,33 @@ h1 {
 main > div {
   display: flex;
   flex-direction: column;
+}
+
+main > div {
+  display: flex;
   padding: 0 16px;
   margin: 50px 0;
 }
 
 main > div > div {
-  display: flex;
   width: 50%;
   padding: 0 16px;
 }
 
 main > div:first-child > div {
-  border-top: var(--first-yellow-color);
+  border-top: 6px solid var(--first-yellow-color);
 }
 
 main > div:last-child > div {
-  border-top: var(--second-yellow-color);
+  border-top: 6px solid var(--second-yellow-color);
 }
 
 @media screen and (max-width: 600px) {
-  main > div > div {
+  main > div {
     flex-direction: column;
+  }
+
+  main > div > div {
     width: 100%;
   }
 }
